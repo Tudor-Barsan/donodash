@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "Red Cross",
+      "description": "Description for Charity",
+      "imageSrc": "/charityImages/unicef.jpeg" 
+    },
+    {
+      "id": 2,
+      "title": "SickKids",
+      "description": "Description for Charity",
+      "imageSrc": "/charityImages/unicef2.jpeg"
+    },
+    {
+        "id": 3,
+        "title": "UNICEF",
+        "description": "Description for Charity",
+        "imageSrc": "/charityImages/redcross.jpeg"
+    },
+    {
+        "id": 4,
+        "title": "Ronald McDonald House",
+        "description": "Description for Charity",
+        "imageSrc": "/charityImages/unicef2.jpeg"
+    },
+    {
+        "id": 5,
+        "title": "SickKids",
+        "description": "Description for Charity",
+        "imageSrc": "/charityImages/redcross.jpeg"
+    },
+    {
+        "id": 6,
+        "title": "DonoDash",
+        "description": "Description for Charity",
+        "imageSrc": "/charityImages/unicef.jpeg"
+    }
+]
