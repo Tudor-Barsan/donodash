@@ -2,16 +2,16 @@ import { useNavigate } from "react-router-dom";
 import donoDashLogo from "/donoDashLogo.png";
 import { ButtonGroup, Button } from "@material-tailwind/react";
 
-const Login = (): JSX.Element => {
+const CharityLogin = (): JSX.Element => {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center">
-        <div className="max-w-md w-full rounded-xl mx-auto mt-4p-8 border">
-            <ButtonGroup color="gray" fullWidth variant="outlined">
-                <Button>Donor</Button>
-                <Button onClick={() => navigate('/charity-login')}>Organization</Button>
-            </ButtonGroup>
-        </div>
+      <div className="max-w-md w-full rounded-xl mx-auto mt-4p-8 border">
+          <ButtonGroup color="gray" fullWidth variant="outlined">
+              <Button onClick={() => navigate('/login')}>Donor</Button>
+              <Button>Organization</Button>
+          </ButtonGroup>
+      </div>
       <div className="max-w-md w-full rounded-xl border-slate-200 mx-auto mt-4 bg-white p-8 border">
         <div className="mt-4">
           <div className="text-xl font-bold text-gray-500 mb-2 text-center">
@@ -28,7 +28,7 @@ const Login = (): JSX.Element => {
             <input
               type="text"
               className="w-full p-2 border border-gray-300 rounded mt-1 placeholder:text-gray-500 appearance-none bg-transparent border-none text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
-              placeholder="Username or Email"
+              placeholder="Business ID or Email"
             />
           </div>
           <div className="flex items-center border-b border-black py-2">
@@ -50,7 +50,7 @@ const Login = (): JSX.Element => {
           <div>
             <button
               className="mt-3 mb-1 w-full py-2 px-4 bg-green-100 hover:bg-green-900 rounded-md text-white font-bold text-base"
-              onClick={() => navigate("/user")}
+              onClick={() => navigate("/org")}
             >
               Sign In
             </button>
@@ -79,4 +79,4 @@ const Login = (): JSX.Element => {
     </div>
   );
 };
-export default Login;
+export default CharityLogin;

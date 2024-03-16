@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
     Card,
     CardHeader,
@@ -17,6 +17,8 @@ interface CharityCardProps {
 
 export function CharityCard({ id, title, description, imageSrc }: CharityCardProps) {
 const navigate = useNavigate();
+const location = useLocation();
+const currentType = location.pathname.split('/')[1];
 return (
     <Card className="my-6 mx-8 w-72 max-h-96">
         <CardHeader floated={false} color="blue-gray" className="relative h-40">
@@ -35,7 +37,7 @@ return (
             </Typography>
         </CardBody>
         <CardFooter className="pt-0">
-            <Button onClick={() => navigate(`/charity/${id}`)}>Read More</Button>
+            <Button onClick={() => navigate(`/${currentType}/charity/${id}`)}>Read More</Button>
         </CardFooter>
     </Card>
 );
