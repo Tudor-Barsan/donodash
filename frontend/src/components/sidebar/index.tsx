@@ -15,7 +15,7 @@ import {
 } from "@heroicons/react/24/solid";
 import donoDashLogo from "/donoDashLogo.png";
 import donoBot from "/donoBot.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FormEvent, useState } from "react";
 
 interface MessageData {
@@ -28,6 +28,9 @@ export function Sidebar() {
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState<MessageData[]>([]);
   const [isTyping, setIsTyping] = useState(false);
+  const location = useLocation();
+  const currentType = location.pathname.split('/')[1];
+
 
   const chat = async (e: FormEvent<HTMLFormElement>, message: string) => {
     e.preventDefault();
@@ -73,19 +76,19 @@ export function Sidebar() {
         />
       </div>
       <List>
-        <ListItem onClick={() => navigate("/")}>
+        <ListItem onClick={() => navigate(`/${currentType}`)}>
           <ListItemPrefix>
             <HomeIcon className="h-5 w-5" />
           </ListItemPrefix>
           Home
         </ListItem>
-        <ListItem onClick={() => navigate("/dashboard")}>
+        <ListItem onClick={() => navigate(`/${currentType}/dashboard`)}>
           <ListItemPrefix>
             <PresentationChartBarIcon className="h-5 w-5" />
           </ListItemPrefix>
           Dashboard
         </ListItem>
-        <ListItem onClick={() => navigate("/profile")}>
+        <ListItem >
           <ListItemPrefix>
             <UserCircleIcon className="h-5 w-5" />
           </ListItemPrefix>
