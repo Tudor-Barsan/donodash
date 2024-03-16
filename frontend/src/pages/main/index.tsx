@@ -45,6 +45,7 @@ const Main = (): JSX.Element => {
                 <div className="flex flex-wrap justify-center">
                     {filteredCharities.map(charity => (
                         <CharityCard 
+                            id={charity.id}
                             title={charity.title} 
                             description={charity.description} 
                             imageSrc={charity.imageSrc} 

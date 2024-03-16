@@ -9,12 +9,13 @@ import {
   } from "@material-tailwind/react";
    
 interface CharityCardProps {
+    id: string;
     title: string;
     description: string;
     imageSrc: string;
 }
 
-export function CharityCard({ title, description, imageSrc }: CharityCardProps) {
+export function CharityCard({ id, title, description, imageSrc }: CharityCardProps) {
 const navigate = useNavigate();
 return (
     <Card className="my-6 mx-8 w-72 max-h-80">
@@ -34,7 +35,7 @@ return (
             </Typography>
         </CardBody>
         <CardFooter className="pt-0">
-            <Button>Read More</Button>
+            <Button onClick={() => navigate(`/charity/${id}`)}>Read More</Button>
         </CardFooter>
     </Card>
 );
