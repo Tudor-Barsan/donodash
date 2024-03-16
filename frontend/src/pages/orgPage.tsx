@@ -81,7 +81,9 @@ const OrgPage = (): JSX.Element => {
 
   return (
     <div className="flex">
-      <Sidebar />
+      <aside className="h-screen sticky top-0">
+        <Sidebar />
+      </aside>
       <Card className="mt-14 mr-10 w-100 rounded-none">
         <CardHeader color="blue-gray" className="relative h-64 w-100">
           <img
