@@ -30,8 +30,7 @@ export function Sidebar() {
   const [chats, setChats] = useState<MessageData[]>([]);
   const [isTyping, setIsTyping] = useState(false);
   const location = useLocation();
-  const currentType = location.pathname.split('/')[1];
-
+  const currentType = location.pathname.split("/")[1];
 
   const chat = async (e: FormEvent<HTMLFormElement>, message: string) => {
     e.preventDefault();
@@ -89,12 +88,6 @@ export function Sidebar() {
           </ListItemPrefix>
           Dashboard
         </ListItem>
-        <ListItem >
-          <ListItemPrefix>
-            <UserCircleIcon className="h-5 w-5" />
-          </ListItemPrefix>
-          Profile
-        </ListItem>
         <ListItem onClick={() => navigate(`/${currentType}/tax`)}>
           <ListItemPrefix>
             <DocumentIcon className="h-5 w-5" />
@@ -108,7 +101,7 @@ export function Sidebar() {
           Log Out
         </ListItem>
       </List>
-      <Card className="h-96 p-4 mt-8 overflow-y-auto">
+      <Card className="h-5/6 p-4 mt-8 overflow-y-auto">
         <img
           src={donoBot}
           alt="DonoBot logo"
