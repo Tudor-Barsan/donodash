@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import donoDashLogo from "/donoDashLogo.png";
-import DonateButton from "../../components/donateButton";
 
 const Login = (): JSX.Element => {
   const navigate = useNavigate();
@@ -75,4 +74,3 @@ const Login = (): JSX.Element => {
   );
 };
 export default Login;
-

@@ -40,9 +40,9 @@ app.post("/create-checkout-session", async (req: Request, res: Response) => {
             price_data: {
               currency: "usd",
               product_data: {
-                name: storeItem.name,
+                name: req.body.info.name,
               },
-              unit_amount: storeItem.priceInCents,
+              unit_amount: req.body.info.amount
             },
             quantity: item.quantity,
           };
