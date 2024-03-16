@@ -26,12 +26,12 @@ const Signup = (): JSX.Element => {
                         <label htmlFor="" className="ml-2 text-sm text-black">Remember me</label>
                     </div>
                     <div>
-                        <button className="mt-3 mb-1 w-full py-2 px-4 bg-green-100 hover:bg-green-900 rounded-md text-white font-bold text-base" onClick={() => navigate('/home')}>Sign Up</button>
+                        <button className="mt-3 mb-1 w-full py-2 px-4 bg-green-100 hover:bg-green-900 rounded-md text-white font-bold text-base" onClick={() => navigate('/')}>Sign Up</button>
                     </div>
                 </form>
             </div>
             <div className="max-w-md w-full mx-auto mt-6">
-                <p className="text-center font-light text-lg ">Already have an account? <a href="" className="font-semibold underline decoration-1 decoration-dotted hover:decoration-solid underline-offset-4" onClick={() => navigate('/')}>Sign in.</a></p>
+                <p className="text-center font-light text-lg ">Already have an account? <a href="" className="font-semibold underline decoration-1 decoration-dotted hover:decoration-solid underline-offset-4" onClick={() => navigate('/login')}>Sign in.</a></p>
             </div>
         </div>
     );

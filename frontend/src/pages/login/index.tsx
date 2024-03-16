@@ -44,7 +44,7 @@ const Login = (): JSX.Element => {
           <div>
             <button
               className="mt-3 mb-1 w-full py-2 px-4 bg-green-100 hover:bg-green-900 rounded-md text-white font-bold text-base"
-              onClick={() => navigate("/home")}
+              onClick={() => navigate("/")}
             >
               Sign In
             </button>
@@ -74,5 +74,5 @@ const Login = (): JSX.Element => {
     </div>
   );
 };
-
 export default Login;
+
