@@ -12,6 +12,7 @@ import {
   Cog6ToothIcon,
   PowerIcon,
   HomeIcon,
+  DocumentIcon,
 } from "@heroicons/react/24/solid";
 import donoDashLogo from "/donoDashLogo.png";
 import donoBot from "/donoBot.png";
@@ -94,11 +95,11 @@ export function Sidebar() {
           </ListItemPrefix>
           Profile
         </ListItem>
-        <ListItem>
+        <ListItem onClick={() => navigate(`/${currentType}/tax`)}>
           <ListItemPrefix>
-            <Cog6ToothIcon className="h-5 w-5" />
+            <DocumentIcon className="h-5 w-5" />
           </ListItemPrefix>
-          Settings
+          Documents
         </ListItem>
         <ListItem onClick={() => navigate("/login")}>
           <ListItemPrefix>
