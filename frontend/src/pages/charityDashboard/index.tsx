@@ -78,7 +78,7 @@ const chartdata = [
   const countryData = [
     {
       name: 'USA',
-      value: 43,
+      value: 44,
       icon: function USAIcon() {
         return (
             <img
@@ -91,7 +91,7 @@ const chartdata = [
     },
     {
         name: 'Canada',
-        value: 22,
+        value: 23,
         icon: function CanadaIcon() {
           return (
               <img
@@ -104,7 +104,7 @@ const chartdata = [
     },
     {
         name: 'Pakistan',
-        value: 18,
+        value: 19,
         icon: function PakistanIcon() {
           return (
               <img
@@ -117,7 +117,7 @@ const chartdata = [
       },
       {
         name: 'Brazil',
-        value:13,
+        value:14,
         icon: function BrazilIcon() {
           return (
               <img
