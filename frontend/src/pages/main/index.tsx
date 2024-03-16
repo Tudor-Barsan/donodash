@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Sidebar } from "../../components/sidebar";
 import { CharityCard } from "../../components/charityCard";
 import charitiesData from "../../assets/data/charities.json";
+import { useState } from 'react';
 import {
     Button,
     Input,
@@ -9,7 +10,21 @@ import {
 
 
 const Main = (): JSX.Element => {
+    const [searchQuery, setSearchQuery] = useState("");
+    const [filteredCharities, setFilteredCharities] = useState(charitiesData);
     const navigate = useNavigate()
+
+    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(event.target.value); 
+        filterCharities(event.target.value);
+    };
+
+    const filterCharities = (query: string) => {
+        const filtered = charitiesData.filter(charity =>
+            charity.title.toLowerCase().includes(query.toLowerCase())
+        );
+        setFilteredCharities(filtered);
+    };
 
     return (
         <div className="flex bg-gray-50">
@@ -17,31 +32,18 @@ const Main = (): JSX.Element => {
                 <Sidebar />
             </aside>
             
-            <div className="flex-grow overflow-y-auto flex flex-wrap justify-center" >
-
-                <div className="my-6 w-4/12 mb-4">
-                    <div className="relative">
-                        <Input
-                            type="search"
-                            color="black"
-                            label="Type here..."
-                            className="pr-20"
-                            containerProps={{
-                            className: "min-w-[288px]",
-                            }}
-                        />
-                        <Button
-                            size="sm"
-                            color="black"
-                            className="!absolute right-1 top-1 rounded"
-                        >
-                            Search
-                        </Button>
-                    </div>
+            <div className="flex-grow overflow-y-auto flex flex-wrap flex-col items-center" >
+                <div className="my-6 w-4/12 mb-4 items-center">
+                    <Input 
+                        color="gray" 
+                        label="Search"
+                        value={searchQuery}
+                        onChange={handleSearchChange}
+                    />
                 </div>
 
                 <div className="flex flex-wrap justify-center">
-                    {charitiesData.map(charity => (
+                    {filteredCharities.map(charity => (
                         <CharityCard 
                             title={charity.title} 
                             description={charity.description} 
