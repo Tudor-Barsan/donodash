@@ -4,6 +4,7 @@ dotenv.config();
 import express, { Request, Response } from "express";
 import cors from "cors";
 import Stripe from "stripe";
+import { OpenAI } from "openai";
 
 const app = express();
 app.use(express.json());
@@ -14,6 +15,7 @@ app.use(
 );
 
 const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY as string);
+const openai = new OpenAI({ apiKey: process.env.OPEN_AI_API_KEY });
 
 interface StoreItem {
   priceInCents: number;
@@ -42,7 +44,7 @@ app.post("/create-checkout-session", async (req: Request, res: Response) => {
               product_data: {
                 name: req.body.info.name,
               },
-              unit_amount: req.body.info.amount
+              unit_amount: req.body.info.amount,
             },
             quantity: item.quantity,
           };
@@ -55,6 +57,17 @@ app.post("/create-checkout-session", async (req: Request, res: Response) => {
   } catch (e) {
     res.status(500).json({ error: e });
   }
+});
+
+app.post("/gpt-query", async (req: Request, res: Response) => {
+  const prompt: string = req.body.prompt;
+  const result = await openai.chat.completions.create({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: prompt }],
+  });
+  res.json({
+    output: result.choices[0].message.content,
+  });
 });
 
 app.listen(3000, () => console.log("Server started on port 3000"));
