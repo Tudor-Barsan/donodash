@@ -48,6 +48,7 @@ const Main = (): JSX.Element => {
                             id={charity.id}
                             title={charity.title} 
                             description={charity.description} 
+                            rating={charity.rating}
                             imageSrc={charity.imageSrc} 
                         />
                     ))}

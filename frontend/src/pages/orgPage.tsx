@@ -10,6 +10,7 @@ import {
   Button,
   Progress,
   Input,
+  Rating,
 } from "@material-tailwind/react";
 import { useParams } from "react-router-dom";
 
@@ -28,6 +29,7 @@ const OrgPage = (): JSX.Element => {
     moreInfo: string;
     donationGoal: string;
     donationProgress: number;
+    rating: number;
     imageSrc: string;
   }
 
@@ -81,7 +83,9 @@ const OrgPage = (): JSX.Element => {
 
   return (
     <div className="flex">
-      <Sidebar />
+      <aside className="h-screen sticky top-0">
+        <Sidebar />
+      </aside>
       <Card className="mt-14 mr-10 w-100 rounded-none">
         <CardHeader color="blue-gray" className="relative h-64 w-100">
           <img
@@ -91,16 +95,24 @@ const OrgPage = (): JSX.Element => {
           />
         </CardHeader>
         <CardBody>
-          <Typography variant="h2" color="blue-gray" className="mt-2">
-            {charityData.title}
-          </Typography>
+          <div className="flex">
+            <Typography variant="h2" color="blue-gray" className="mt-2">
+              {charityData.title}
+            </Typography>
+            <Rating className="ml-4 mt-3" value={charityData.rating} readonly />
+          </div>
           <Typography variant="h5" color="blue-gray" className="mb-2 ml-1">
             {charityData.location}
           </Typography>
           <Typography className="ml-1 mb-4">
             {charityData.description}
           </Typography>
-          <Typography className="lead ml-1 mb-4">Open Since: 1968</Typography>
+          <div className="flex">
+            <Typography variant="h6" color="blue-gray" className="ml-1 mb-5">Giving Back Since:</Typography>
+            <Typography className="lead ml-1 mb-4">
+              {charityData.dateStarted}
+            </Typography>
+          </div>
           <div className="flex">
             <div style={{ width: "60%" }}>
               <Typography variant="h4" color="blue-gray" className="mb-2 ml-1">
