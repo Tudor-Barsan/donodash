@@ -23,7 +23,7 @@ const Login = (): JSX.Element => {
                         <label htmlFor="" className="ml-2 text-sm text-black">Remember me</label>
                     </div>
                     <div>
-                        <button className="mt-3 mb-1 w-full py-2 px-4 bg-green-100 hover:bg-green-900 rounded-md text-white font-bold text-base" onClick={() => navigate('/home')}>Sign In</button>
+                        <button className="mt-3 mb-1 w-full py-2 px-4 bg-green-100 hover:bg-green-900 rounded-md text-white font-bold text-base" onClick={() => navigate('/')}>Sign In</button>
                     </div>
                     <div>
                         <p className="text-center font-bold text-base text-gray-500 mb-3"><a href="" className="hover:underline underline-offset-3">Forgot your password? &gt;</a></p>
