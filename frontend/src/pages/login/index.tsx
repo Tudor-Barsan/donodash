@@ -68,7 +68,6 @@ const Login = (): JSX.Element => {
             Set one up now.
           </a>
         </p>
-        <DonateButton />
       </div>
     </div>
   );

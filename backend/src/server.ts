@@ -48,8 +48,8 @@ app.post("/create-checkout-session", async (req: Request, res: Response) => {
           };
         }
       ),
-      success_url: `http://localhost:5173/success.html`,
-      cancel_url: `http://localhost:5173/cancel.html`,
+      success_url: `http://localhost:5173/`,
+      cancel_url: `http://localhost:5173/`,
     });
     res.json({ url: session.url });
   } catch (e) {

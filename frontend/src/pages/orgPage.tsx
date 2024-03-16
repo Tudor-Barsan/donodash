@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Sidebar } from "../components/sidebar";
+import charities from "../assets/data/charities.json";
 import {
   Card,
   CardHeader,
@@ -10,6 +11,7 @@ import {
   Progress,
   Input,
 } from "@material-tailwind/react";
+import { useParams } from "react-router-dom";
 
 interface CharityDonationInfo {
   name: string;
@@ -17,6 +19,18 @@ interface CharityDonationInfo {
 }
 
 const OrgPage = (): JSX.Element => {
+  interface CharityData {
+    id: number;
+    title: string;
+    location: string;
+    description: string;
+    dateStarted: string;
+    moreInfo: string;
+    donationGoal: string;
+    donationProgress: number;
+    imageSrc: string;
+  }
+
   interface CheckoutSessionResponse {
     url: string;
   }
@@ -25,6 +39,8 @@ const OrgPage = (): JSX.Element => {
     id: number;
     quantity: number;
   }
+  const { id } = useParams();
+  const charityData: CharityData = charities[Number(id) - 1];
 
   const items: CheckoutItem[] = [{ id: 1, quantity: 1 }];
 
@@ -65,26 +81,24 @@ const OrgPage = (): JSX.Element => {
 
   return (
     <div className="flex">
-      <Sidebar/>
+      <Sidebar />
       <Card className="mt-14 mr-10 w-100 rounded-none">
         <CardHeader color="blue-gray" className="relative h-64 w-100">
           <img
-            src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+            src={charityData.imageSrc}
             alt="card-image"
             className="h-full w-full object-cover"
           />
         </CardHeader>
         <CardBody>
           <Typography variant="h2" color="blue-gray" className="mt-2">
-            ORG TITLE
+            {charityData.title}
           </Typography>
           <Typography variant="h5" color="blue-gray" className="mb-2 ml-1">
-            Location
+            {charityData.location}
           </Typography>
           <Typography className="ml-1 mb-4">
-            The place is close to Barceloneta Beach and bus stop just 2 min by
-            walk and near to &quot;Naviglio&quot; where you can enjoy the main
-            night life in Barcelona.
+            {charityData.description}
           </Typography>
           <Typography className="lead ml-1 mb-4">Open Since: 1968</Typography>
           <div className="flex">
@@ -93,19 +107,16 @@ const OrgPage = (): JSX.Element => {
                 More Info
               </Typography>
               <Typography className="ml-1 mb-10">
-                The place is close to Barceloneta Beach and bus stop just 2 min
-                by walk and near to &quot;Naviglio&quot; where you can enjoy the
-                main night life in Barcelona. The place is close to Barceloneta
-                Beach and bus stop just 2 min by walk and near to
-                &quot;Naviglio&quot; where you can enjoy the main night life in
-                Barcelona. The place is close to Barceloneta Beach and bus stop
-                just 2 min by walk and near to &quot;Naviglio&quot; where you
-                can enjoy the main night life in Barcelona.
+                {charityData.moreInfo}
               </Typography>
               <Typography variant="h5" color="blue-gray" className="ml-1 mb-4">
-                Donation Goal: $100,000
+                Donation Goal: ${charityData.donationGoal}
               </Typography>
-              <Progress value={70} color="green" className="h-4" />
+              <Progress
+                value={charityData.donationProgress}
+                color="green"
+                className="h-4"
+              />
             </div>
             <Card className="ml-28 flex flex-col pl-10 pr-10 pt-16 pb-16">
               <Typography variant="h4" color="blue-gray" className="ml-10 mb-6">
@@ -132,11 +143,3 @@ const OrgPage = (): JSX.Element => {
 };
 
 export default OrgPage;
-
-//Image
-//Name
-//Location
-//Since
-//Extra Info
-//Progress Bar
-//Donate

@@ -7,6 +7,7 @@
     "dateStarted": "January 15, 1998",
     "moreInfo": "The Global Relief Foundation focuses on bringing immediate relief to victims of natural disasters and ongoing poverty by offering food, clean water, shelter, and medical care. Beyond emergency relief, we invest in education programs and infrastructure to empower communities towards long-term self-sufficiency.",
     "donationGoal": "500000",
+    "donationProgress": 70,
     "imageSrc": "/charityImages/global.jpeg"
   },
   {
@@ -17,6 +18,7 @@
     "dateStarted": "April 22, 1982",
     "moreInfo": "Save the Whales is at the forefront of global efforts to save endangered marine species by fighting against whaling, pollution, and habitat destruction. Through advocacy, public education, and partnership with local governments, we aim to create marine sanctuaries and influence legislation to ensure the safety of whales and marine life.",
     "donationGoal": "250000",
+    "donationProgress": 80,
     "imageSrc": "/charityImages/whales.webp"
   },
   {
@@ -27,6 +29,7 @@
     "dateStarted": "June 5, 2005",
     "moreInfo": "Books for All bridges the education gap by collecting, distributing, and donating new and used books to schools and libraries in underprivileged areas worldwide. Our initiatives also include setting up reading programs and teacher training workshops to enhance literacy and learning outcomes.",
     "donationGoal": "150000",
+    "donationProgress": 45,
     "imageSrc": "/charityImages/booksforall.jpeg"
   },
   {
@@ -37,6 +40,7 @@
     "dateStarted": "September 18, 2010",
     "moreInfo": "The Green Earth Initiative is dedicated to combating climate change through direct action and education. Our projects include planting millions of trees, restoring degraded lands, promoting sustainable agricultural practices, and engaging communities in conservation efforts. Our goal is to create a healthier planet for future generations.",
     "donationGoal": "600000",
+    "donationProgress": 90,
     "imageSrc": "/charityImages/greenearth.jpeg"
   },
   {
@@ -47,6 +51,7 @@
     "dateStarted": "March 22, 2000",
     "moreInfo": "Water for the World tackles the global water crisis by implementing sustainable water solutions in communities suffering from lack of access to clean water. Our work includes drilling wells, setting up rainwater harvesting systems, and educating on water conservation, aiming to ensure that every person has access to safe drinking water.",
     "donationGoal": "300000",
+    "donationProgress": 10,
     "imageSrc": "/charityImages/water.jpeg"
   },
   {
@@ -57,6 +62,7 @@
     "dateStarted": "August 15, 1995",
     "moreInfo": "Habitat Helpers is not just about building homes; it's about building hope. By mobilizing volunteers and local partners, we construct affordable, sustainable housing for families in need, fostering community development and empowering individuals through homeownership.",
     "donationGoal": "400000",
+    "donationProgress": 70,
     "imageSrc": "/charityImages/habitat.jpeg"
   },
   {
@@ -67,6 +73,7 @@
     "dateStarted": "November 10, 2012",
     "moreInfo": "Tech for Tomorrow democratizes technology education by providing underprivileged youth with access to computers, coding classes, and tech workshops. Our goal is to prepare the next generation for the future",
     "donationGoal": "250000",
+    "donationProgress": 50,
     "imageSrc": "/charityImages/tech.webp"
   },
   {
@@ -77,6 +84,7 @@
     "dateStarted": "February 28, 2008",
     "moreInfo": "Artists United fosters peace, dialogue, and healing in conflict-affected areas by supporting local artists. We organize exhibitions to showcase their work, provide financial aid, and facilitate workshops that encourage community engagement and cultural expression. Our initiatives not only offer artists a platform but also bring together communities torn apart by conflict, promoting understanding and reconciliation through the universal language of art.",
     "donationGoal": "180000",
+    "donationProgress": 60,
     "imageSrc": "/charityImages/music.jpeg"
   },
   {
@@ -87,6 +95,7 @@
     "dateStarted": "July 4, 2003",
     "moreInfo": "Feed the Future works to eliminate hunger and ensure food security for impoverished communities through sustainable agriculture. By introducing innovative farming techniques and supporting small-scale farmers with resources and education, we aim to increase food production, improve nutritional outcomes, and build resilience against climate change. Our programs also focus on empowering women and young farmers to lead in their communities, driving economic growth and social change from the ground up.",
     "donationGoal": "220000",
+    "donationProgress": 30,
     "imageSrc": "/charityImages/feedthefuture.jpeg"
   }
 ]
