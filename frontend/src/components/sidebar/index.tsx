@@ -112,12 +112,12 @@ export function Sidebar() {
         <img
           src={donoBot}
           alt="DonoBot logo"
-          className="mx-auto h-8 object-cover mb-2"
+          className="mx-auto h-8 object-cover"
         />
         <section>
           {chats && chats.length
             ? chats.map((chat, index) => (
-                <p key={index} className="mb-2">
+                <p key={index} className="mb-2 mt-2">
                   <span>
                     <b>{chat.role.toUpperCase()}</b>
                   </span>

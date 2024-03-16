@@ -6,16 +6,18 @@ import {
     CardFooter,
     Typography,
     Button,
+    Rating,
   } from "@material-tailwind/react";
    
 interface CharityCardProps {
     id: string;
     title: string;
     description: string;
+    rating: number
     imageSrc: string;
 }
 
-export function CharityCard({ id, title, description, imageSrc }: CharityCardProps) {
+export function CharityCard({ id, title, description, rating, imageSrc}: CharityCardProps) {
 const navigate = useNavigate();
 const location = useLocation();
 const currentType = location.pathname.split('/')[1];
@@ -36,8 +38,9 @@ return (
                 {description}
             </Typography>
         </CardBody>
-        <CardFooter className="pt-0">
+        <CardFooter className="pt-0 flex">
             <Button onClick={() => navigate(`/${currentType}/charity/${id}`)}>Read More</Button>
+            <Rating className="ml-4 mt-3" value={rating} readonly/>
         </CardFooter>
     </Card>
 );
