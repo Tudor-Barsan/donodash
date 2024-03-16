@@ -20,8 +20,8 @@ Charities, often limited by resources and visibility, find a powerful ally in Do
 ## ⚙️ How we built it
 
 Our site is built with React, TypeScript, and TailwindCSS on the frontend, with Node.js and Express on the backend. We integrated Stripe's API capabilities to handle a seamless and secure payment experience for donors. We also integrated OpenAI's API within our chatbot Dono to provide users on charity-related information.
+![Alt text](/frontend/public/techOverview.png "techOverview")
 
-*Screenshot 2024-03-16 at 5 21 30 AM*
 
 ## 🚧 Challenges we ran into
 
