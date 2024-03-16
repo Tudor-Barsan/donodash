@@ -6,6 +6,7 @@ import CharityLogin from "../src/pages/charityLogin";
 import CharitySignup from "../src/pages/charitySignup";
 import CharityDashboard from "../src/pages/charityDashboard";
 import DonorDashboard from "../src/pages/donorDashboard";
+import PDFViewer from "../src/pages/pdf";
 import Main from "../src/pages/main";
 import OrgPage from "./pages/OrgPage";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/:type/charity/:id" element={<OrgPage />} />
         <Route path="/org/dashboard" element={<CharityDashboard />} />
         <Route path="/user/dashboard" element={<DonorDashboard />} />
+        <Route path="/:type/tax" element={<PDFViewer />} />
       </Routes>
     </BrowserRouter>
   );
