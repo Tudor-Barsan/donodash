@@ -7,7 +7,7 @@ import CharitySignup from "../src/pages/charitySignup";
 import CharityDashboard from "../src/pages/charityDashboard";
 import DonorDashboard from "../src/pages/donorDashboard";
 import Main from "../src/pages/main";
-import OrgPage from "./pages/orgPage";
+import OrgPage from "./pages/OrgPage";
 
 function App() {
   return (

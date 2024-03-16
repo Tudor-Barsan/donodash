@@ -108,7 +108,9 @@ const OrgPage = (): JSX.Element => {
             {charityData.description}
           </Typography>
           <div className="flex">
-            <Typography variant="h6" color="blue-gray" className="ml-1 mb-5">Giving Back Since:</Typography>
+            <Typography variant="h6" color="blue-gray" className="ml-1 mb-5">
+              Giving Back Since:
+            </Typography>
             <Typography className="lead ml-1 mb-4">
               {charityData.dateStarted}
             </Typography>
