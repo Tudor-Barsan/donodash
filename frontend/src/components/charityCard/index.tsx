@@ -17,7 +17,7 @@ interface CharityCardProps {
 export function CharityCard({ title, description, imageSrc }: CharityCardProps) {
 const navigate = useNavigate();
 return (
-    <Card className="my-6 mx-8 w-72">
+    <Card className="my-6 mx-8 w-72 max-h-80">
         <CardHeader floated={false} color="blue-gray" className="relative h-40">
             <img
             src={imageSrc}
