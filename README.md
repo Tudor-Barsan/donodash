@@ -12,10 +12,10 @@ In today's fast-paced world, where digital transformation is at the heart of soc
 
 Donodash redefines the donor experience by centralizing the ability to browse and support a diverse array of charities. It eliminates the need to navigate through multiple websites and platforms, offering a unified space where individuals can find causes that resonate with them. This convenience is amplified by the platform's additional features, which include:
 ### For Donors
-Donodash redefines the donor experience by centralizing the ability to browse and support a diverse array of charities. It eliminates the need to navigate through multiple websites and platforms, offering a unified space where individuals can find causes that resonate with them. This convenience is amplified by the platform's additional features, which include: Donation Tracking, Rewards, Tax Document Tracking.
+Donation Tracking, Analytics, Rewards, Tax Document Tracking.
 
 ### For Charities
-Charities, often limited by resources and visibility, find a powerful ally in Donodash. The platform offers non-profit organizations a suite of tools designed to enhance their marketing efforts, understand their donor base, and optimize their fundraising strategies.
+Marketing, Charity Statistics, Partnerships
 
 ## ⚙️ How we built it
 
